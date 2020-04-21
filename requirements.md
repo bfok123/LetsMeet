@@ -107,18 +107,18 @@ The user doesn’t select an available time slot.
 * User can also create/edit a schedule after the profile has been created
 
 ### Creating a group
-Actors: app user​
-Preconditions: user has created a profile
-Triggers: user creates a group (presses a button)
-Minimal/success guarantees: a group is created with the user’s selected group members
-Steps to success scenario: 
-User presses a “Create a Group” button
-User enters a group name
-User searches (by name, username, email, or phone number) and selects group members
-User confirms group details, group is created, and invites are sent out to group members
-Failure end conditions:
+1. Actors: app user​
+2. Preconditions: user has created a profile
+3. Triggers: user creates a group (presses a button)
+4. Minimal/success guarantees: a group is created with the user’s selected group members
+5. Steps to success scenario: 
+	1. User presses a “Create a Group” button
+	2. User enters a group name
+	3. User searches (by name, username, email, or phone number) and selects group members
+	4. User confirms group details, group is created, and invites are sent out to group members
+6. Failure end conditions:
 None
-Extensions/Variations of the scenario:
+7. Extensions/Variations of the scenario:
 None
 
 ### Joining a group
@@ -127,9 +127,9 @@ None
 3. Triggers: user accepts the invitation to the group
 4. minimal/success guarantees (end condition): user joins the group and is able to use all functionality of being in a group
 5. the list of steps to the success scenario
-User presses a button to accept invitation
-User joins the group now.
-6. failure end conditions
+	1. User presses a button to accept invitation
+	2. User joins the group now.
+6. failure end conditions: 
 None
 7. extensions/variations of the scenario: 
 user declines the group invitation and is not added to the group
@@ -140,33 +140,33 @@ user declines the group invitation and is not added to the group
 3. Triggers: user wants to leave a group.
 4. minimal/success guarantees (end condition): user leaves the group and no longer appears in the group to any of the group members
 5. the list of steps to the success scenario
-User presses a button to leave the group
-A confirmation dialog appears
-User confirms that they want to leave the group
-User leaves the group and no longer appears in the group to other group members
-6. failure end conditions
+	1. User presses a button to leave the group
+	2. A confirmation dialog appears
+	3. User confirms that they want to leave the group
+	4. User leaves the group and no longer appears in the group to other group members
+6. failure end conditions: 
 	NONE
-7. extensions/variations of the scenario
+7. extensions/variations of the scenario: 
 If the user is the only user in the group, the group is deleted after the user leaves
 The user can leave a group after they have joined it by pressing the “Leave Group” button and confirming that they want to leave.
 
 ### Scheduling a meeting with a poll
-Actors: user in a group
-Preconditions: a group of at least 2 users is formed
-Triggers: any group member requests a meeting in the app
-Minimal/success guarantees: a meeting time agreed by every group member is determined and the meeting is put on every group member’s schedule
-Steps to the success scenario:
-Each group member indicates when they are available in their own schedule (this was done on account creation).
-The user requests a meeting time in the app. The app checks everyone’s free time and shows time slots when strictly more than 50% of the group are available.
-The user chooses the meeting request to be a poll.
-The user selects the meeting times that they want to request and be included in the poll
-The poll for this meeting request is posted in the group.
-When everyone has responded to the poll (or the poll times out), the meeting is successfully scheduled and put on the schedules of people who voted for the winning poll option.
+1. Actors: user in a group
+2. Preconditions: a group of at least 2 users is formed
+3. Triggers: any group member requests a meeting in the app
+4. Minimal/success guarantees: a meeting time agreed by every group member is determined and the meeting is put on every group member’s schedule
+5. Steps to the success scenario:
+	1. Each group member indicates when they are available in their own schedule (this was done on account creation).
+	2. The user requests a meeting time in the app. The app checks everyone’s free time and shows time slots when strictly more than 50% of the group are available.
+	3. The user chooses the meeting request to be a poll.
+	4. The user selects the meeting times that they want to request and be included in the poll
+	5. The poll for this meeting request is posted in the group.
+	6. When everyone has responded to the poll (or the poll times out), the meeting is successfully scheduled and put on the schedules of people who voted for the winning poll option.
 6. Failure end conditions:
-No meeting time can be suggested if no time slot working for strictly more than 50% of the group can be found.
+* No meeting time can be suggested if no time slot working for strictly more than 50% of the group can be found.
 7. Extensions/variations of the scenario:
-If no meeting time can be suggested, a warning is shown in the UI telling the user they should adjust their schedule for the meeting.
-If there is a tie in the poll result, the person who requested the meeting makes the final decision.
+* If no meeting time can be suggested, a warning is shown in the UI telling the user they should adjust their schedule for the meeting.
+* If there is a tie in the poll result, the person who requested the meeting makes the final decision.
 
 ### Scheduling a meeting with unanimous decision
 
@@ -175,13 +175,13 @@ If there is a tie in the poll result, the person who requested the meeting makes
 3. Triggers: A group member requests a meeting
 4. minimal/success guarantees (end condition): All members accept the requested meeting.
 5. the list of steps to the success scenario
-Each group member indicates when they are available in their own schedule (this was done on account creation).
-The user requests a meeting time in the app selecting the option to make a decision by unanimous votes.
-All group members accept the requested meeting time.
+	1. Each group member indicates when they are available in their own schedule (this was done on account creation).
+	2. The user requests a meeting time in the app selecting the option to make a decision by unanimous votes.
+	3. All group members accept the requested meeting time.
 6. failure end conditions
-The meeting is not scheduled if anyone declines the meeting request.
+* The meeting is not scheduled if anyone declines the meeting request.
 7. extensions/variations of the scenario
-If no meeting time can be suggested, a warning is shown in the UI telling the user they should adjust their schedule for the meeting.
+* If no meeting time can be suggested, a warning is shown in the UI telling the user they should adjust their schedule for the meeting.
 
 
 
