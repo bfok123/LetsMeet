@@ -7,13 +7,13 @@ try to not exceed 8 and 5, respectively. (You don't need to go over 4 and 2
 unless you want to.
 ​
 ### Answer each of these questions briefly (1-4 sentences):
-1. What is your product?
+1. What is your product?  
 A.1) LetsMeet is a scheduling app focused on mobile users that allows users to create default schedule and schedule meetings through making LetsMeet groups. 
-2. What problem does it solve?
+2. What problem does it solve?  
 A.2) It makes scheduling events quicker and easier by avoiding the long conversations people need to have about each of their personal calendars in order to schedule events together.
-3. Who is the target audience?
+3. Who is the target audience?  
 A.3) We are focusing on college students and other people working in an academic environment who need to find meeting times and places with widely different schedules.
-4. What alternatives exist, and how is your product different?
+4. What alternatives exist, and how is your product different?  
 A.4) Some alternative tools are When2Meet, Google Calendar, and Doodle.
 
 When2Meet: When2Meet has an un-intuitive UI and is difficult to operate on a mobile phone. Another disadvantage of When2Meet is the need to specify your schedule each time you use it for meeting with a group. LetsMeet will be developed with mobile users in mind and give people the abilities to use the same schedule over multiple meeting groups without needing to specify it multiple times.
@@ -47,25 +47,25 @@ having this feature. (Shoot for 5-20 single sentence bullets that include
 the word "must" - but you can play around with it.)
 
 Major Feature 1:
-Must NOT show event details in calendars to shared users, only show time slots where the user is available.
-A user will have a universal (default) schedule that they will share with each group they create or accept an invitation to without the app asking them to specify a schedule.
+* Must NOT show event details in calendars to shared users, only show time slots where the user is available.
+* A user will have a universal (default) schedule that they will share with each group they create or accept an invitation to without the app asking them to specify a schedule.
 ​
 Major Feature 2:
-Must allow searching another user by their name, email, and phone number in order to invite them.
-Must allow users to accept or decline a group invite.
-Must allow users to leave groups.
+* Must allow searching another user by their name, email, and phone number in order to invite them.
+* Must allow users to accept or decline a group invite.
+* Must allow users to leave groups.
 
 Major Feature 3:
-Must allow users to create meeting requests and choose whether all users have to confirm the meeting (unanimous) or create a poll of meetings times
-Must allow users to confirm or decline a meeting request.
-Must allow users to vote on meeting request polls.
-Must send a notification when a meeting has been set.
-Must allow users to review the meeting time after it is confirmed.
-Must allow users to remove themselves from a meeting after confirming said meeting.
+* Must allow users to create meeting requests and choose whether all users have to confirm the meeting (unanimous) or create a poll of meetings times
+* Must allow users to confirm or decline a meeting request.
+* Must allow users to vote on meeting request polls.
+* Must send a notification when a meeting has been set.
+* Must allow users to review the meeting time after it is confirmed.
+* Must allow users to remove themselves from a meeting after confirming said meeting.
 
 Major Feature 4:
-Must automatically add the scheduled meeting (and block the time slot) to every team member’s shared schedule, without any further interaction from the user once the meeting time is confirmed.
-Must wait for every user in the group to vote for a requested time before adding the event to every team member’s shared schedule.
+* Must automatically add the scheduled meeting (and block the time slot) to every team member’s shared schedule, without any further interaction from the user once the meeting time is confirmed.
+* Must wait for every user in the group to vote for a requested time before adding the event to every team member’s shared schedule.
 
 ### Non-functional requirements:
 Break down any things your product must in a performance/privacy/under-the-hood
@@ -95,15 +95,16 @@ comes up with a use case and covers each of these (briefly):
 3. Triggers: user is creating a profile and has to create a schedule
 4. minimal/success guarantees (end condition): user’s schedule is created
 5. the list of steps to the success scenario: 
-User opens the app
-User creates a new profile
-User enters their personal information
-User goes to next page
-User clicks and drags (or other input functionality TBD) their available times on the calendar on screen
-User confirms their schedule is completed
-6. failure end conditions
+	1. User opens the app
+	2. User creates a new profile
+	3. User enters their personal information
+	4. User goes to next page
+	5. User clicks and drags (or other input functionality TBD) their available times on the calendar on screen
+	6. User confirms their schedule is completed
+6. failure end conditions: 
 The user doesn’t select an available time slot.
 7. extensions/variations of the scenario
+* User can also create/edit a schedule after the profile has been created
 
 ### Creating a group
 Actors: app user​
